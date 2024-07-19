@@ -1,4 +1,4 @@
-async function fetchUserdata(){
+async function fetchUserData(){
     const apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
     const dataContainer = document.getElementById('api-data');
@@ -11,7 +11,8 @@ async function fetchUserdata(){
         users.forEach(user =>{
         const listItems = document.createElement('li');
         listItems.textContent = user.name;  //set content to users name
-        userList.appendChild(listItems);  //append li to userList
+       
+        userList.appendChild(listItems);  //append li to userList(ul)
         
         dataContainer.appendChild(userList);  //append userList to datacontainer
 
@@ -20,9 +21,10 @@ async function fetchUserdata(){
     } catch{
         dataContainer.textContent = 'Failed to load user data.';
     }
+    
   } 
-  fetchUserdata();
-  document.addEventListener('DOMContentLoaded',fetchUserdata);
+  fetchUserData();
+  document.addEventListener('DOMContentLoaded',fetchUserData);
 
 
     
