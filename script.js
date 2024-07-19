@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const feedbackDiv = document.getElementById("form-feedback");
         feedbackDiv.style.display = "block";
 
-        const userName = document.getElementById("username").value.trim();
-        if (userName.length < 3){
+        const username = document.getElementById("username").value.trim();
+        if (username.length < 3){
             isValid = false;
             messages.push("username must be atleast three characters long");
 
